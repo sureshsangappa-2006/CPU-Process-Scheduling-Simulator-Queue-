@@ -2,7 +2,7 @@
 
 #define MAX 20
 
-// Structure for a process
+
 struct Process {
     int pid;
     int burstTime;
@@ -10,12 +10,12 @@ struct Process {
     int turnaroundTime;
 };
 
-// Queue implementation
+
 struct Process queue[MAX];
 int front = -1;
 int rear = -1;
 
-// Insert process into queue
+
 void enqueue(struct Process p) {
     if (rear == MAX - 1) {
         printf("Queue is full!\n");
@@ -29,7 +29,7 @@ void enqueue(struct Process p) {
     queue[++rear] = p;
 }
 
-// Remove process from queue
+
 struct Process dequeue() {
     struct Process p = queue[front++];
 
